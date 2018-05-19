@@ -185,8 +185,6 @@
 		"react/style-prop-object": "warn",
 		"react/void-dom-elements-no-children": "warn",
 		"jsx-a11y/aria-role": "warn",
-		"jsx-a11y/img-has-alt": "warn",
-		"jsx-a11y/img-redundant-alt": "warn",
 		"jsx-a11y/no-access-key": "warn"
 	}
 }
