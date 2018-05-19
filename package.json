@@ -10,7 +10,7 @@
         "lint:watch": "esw -w lib/**",
         "prepublish": "npm run build"
     },
-    "author": "",
+    "author": "Winking Owl <adriaan@winkingowl.digital>",
     "license": "ISC",
     "devDependencies": {
         "babel-cli": "^6.26.0",
@@ -28,5 +28,14 @@
         "react": "^16.3.2",
         "react-dom": "^16.3.2",
         "styled-components": "^3.2.6"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/HurricaneInteractive/builtin-react"
+    },
+    "bugs": {
+        "url": "https://github.com/HurricaneInteractive/builtin-react/issues"
+    },
+    "deprecated": false,
+    "homepage": "https://github.com/HurricaneInteractive/builtin-react"
 }
