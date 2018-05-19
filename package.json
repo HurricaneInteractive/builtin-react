@@ -37,5 +37,8 @@
         "url": "https://github.com/HurricaneInteractive/builtin-react/issues"
     },
     "deprecated": false,
-    "homepage": "https://github.com/HurricaneInteractive/builtin-react"
+    "homepage": "https://github.com/HurricaneInteractive/builtin-react",
+    "dependencies": {
+        "classnames": "^2.2.5"
+    }
 }
