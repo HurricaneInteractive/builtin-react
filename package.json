@@ -8,7 +8,7 @@
         "build:watch": "babel lib -w -d build",
         "lint": "eslint lib/**; exit 0",
         "lint:watch": "esw -w lib/**",
-        "prepublish": "npm run build"
+        "prepare": "npm run build"
     },
     "author": "Winking Owl <adriaan@winkingowl.digital>",
     "license": "ISC",
