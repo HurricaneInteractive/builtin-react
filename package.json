@@ -1,6 +1,6 @@
 {
     "name": "builtin-react",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "React Component library for rapid prototyping",
     "main": "build/index.js",
     "scripts": {
@@ -40,5 +40,11 @@
     "homepage": "https://github.com/HurricaneInteractive/builtin-react",
     "dependencies": {
         "classnames": "^2.2.5"
-    }
+    },
+    "keywords": [
+      "React",
+      "Components",
+      "Prototyping",
+      "Reusable"
+    ]
 }
