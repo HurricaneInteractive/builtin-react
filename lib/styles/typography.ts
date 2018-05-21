@@ -1,10 +1,8 @@
-export const basefontsize = 17;
+export const basefontsize = 16;
 export const h1 = 50;
-export const h2 = 35;
-export const h3 = 30;
-export const h4 = 28;
-export const h5 = 24;
-export const h6 = 21;
+export const h2 = 37;
+export const h3 = 28;
+export const h4 = 21;
 export const blockquote = 20;
 export const button = 15;
 export const label = 15;

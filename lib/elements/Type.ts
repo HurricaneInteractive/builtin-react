@@ -6,7 +6,7 @@ import { calculateEM } from '../helpers/helpers';
 export const Text = styled.p`
     font-size: ${calculateEM(basefontsize)};
     color: ${props => props.theme.font || grey};
-    margin: ${calculateEM(20, basefontsize)} 0 ${calculateEM(25, basefontsize)};
+    margin: ${calculateEM(10, basefontsize)} 0 ${calculateEM(20, basefontsize)};
     line-height: 1.5;
     font-weight: normal;
 `
