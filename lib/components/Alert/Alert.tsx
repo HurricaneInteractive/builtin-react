@@ -4,11 +4,10 @@ import { rgba, darken } from 'polished';
 import classNames from 'classnames';
 import { Text } from '../../elements/Type';
 import { AlertWrapper } from '../../elements/Alert';
-import { black } from '../../styles/colors';
+import { black, info } from '../../styles/colors';
 
 interface AlertProps {
     type: string;
-    message?: string;
     positioned?: boolean;
     position?: string;
     hasClose?: boolean;
@@ -21,7 +20,6 @@ const Alert: React.StatelessComponent<AlertProps> = props => {
 
     const {
         type,
-        message,
         positioned,
         position,
         hasClose,
@@ -43,27 +41,25 @@ const Alert: React.StatelessComponent<AlertProps> = props => {
     let closeIcon = <svg viewBox="466 407 9 9"><g transform="translate(595.278 64.278)"><path d="M.176.03H1.911V11.023H.176Z" transform="translate(-129.424 344.052) rotate(-45)"/><path d="M0,0H1.736V10.992H0Z" transform="translate(-121.505 342.722) rotate(45)"/></g></svg>;
 
     return (
-        <ThemeProvider theme={theme}>
-            <AlertWrapper className={alertClassname}>
-                <Text>{message}</Text>
-                { 
-                    hasClose === true && typeof onClose === 'function' ? (
-                        <a
-                            href="#" 
-                            className="close-trigger" 
-                            onClick={(e) => {
-                                e.preventDefault();
-                                onClose();
-                            }}
-                        >
-                        {closeIcon}
-                        </a>
-                    ) : (
-                        ''
-                    )
-                }
-            </AlertWrapper>
-        </ThemeProvider>
+        <AlertWrapper theme={theme} className={alertClassname}>
+            {props.children}
+            {
+                hasClose === true && typeof onClose === 'function' ? (
+                    <a
+                        href="#" 
+                        className="close-trigger" 
+                        onClick={(e) => {
+                            e.preventDefault();
+                            onClose();
+                        }}
+                    >
+                    {closeIcon}
+                    </a>
+                ) : (
+                    ''
+                )
+            }
+        </AlertWrapper>
     )
 }
 
@@ -103,7 +99,7 @@ const StyledAlert = styled(Alert)`
                 max-width: 9px;
                 width: 100%;
                 height: auto;
-                fill: ${ props => darken(0.3, props.theme.alert) }
+                fill: ${ props => darken(0.3, props.theme.alert || info) }
             }
         }
     }
@@ -112,9 +108,6 @@ const StyledAlert = styled(Alert)`
     }
     > *:last-child {
         margin-bottom: 0;
-    }
-    p {
-        margin: 0;
     }
 `;
 

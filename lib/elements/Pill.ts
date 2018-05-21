@@ -1,6 +1,6 @@
-import * as React from 'react';
 import styled from '../theme';
 import { tags } from '../styles/typography';
+import { white, grey } from '../styles/colors';
 import { calculateEM } from '../helpers/helpers';
 
 export const Pill = styled.a`
@@ -18,8 +18,8 @@ export const Pill = styled.a`
     padding: ${ calculateEM(5, tags) } ${ calculateEM(8, tags) };
     margin: 0 ${ calculateEM(5, tags) } ${ calculateEM(5, tags) } 0;
     font-size: ${ calculateEM(tags) };
-    color: ${props => props.theme.pillFont};
-    background: ${props => props.theme.pillFill};
+    color: ${props => props.theme.pillFont || white};
+    background: ${props => props.theme.pillFill || grey};
 `;
 
 export const ButtonPill = Pill.withComponent('button');

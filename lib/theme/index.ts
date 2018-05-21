@@ -1,4 +1,5 @@
 import * as styledComponents from "styled-components";
+import { ThemedStyledComponentsModule } from 'styled-components';
 import * as colors from '../styles/colors';
 
 const {
@@ -7,7 +8,7 @@ const {
     injectGlobal,
     keyframes,
     ThemeProvider
-} = styledComponents as styledComponents.ThemedStyledComponentsModule<IThemeInterface>;
+} = styledComponents as ThemedStyledComponentsModule<IThemeInterface>;
 
 export interface IThemeInterface {
     default: string;
