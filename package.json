@@ -1,13 +1,14 @@
 {
     "name": "builtin-react",
-    "version": "0.1.4",
+    "version": "0.2.0",
     "description": "React Component library for rapid prototyping",
     "main": "build/index.js",
     "scripts": {
         "build": "babel lib --extensions '.ts,.tsx,.js,.jsx' --out-dir build",
         "build:watch": "babel lib -w --extensions '.ts,.tsx,.js,.jsx' --out-dir build",
         "lint": "eslint lib/**; exit 0",
-        "lint:watch": "esw -w lib/**"
+        "lint:watch": "esw -w lib/**",
+        "prepublish": "npm run build"
     },
     "author": "Winking Owl <adriaan@winkingowl.digital>",
     "license": "MIT",
