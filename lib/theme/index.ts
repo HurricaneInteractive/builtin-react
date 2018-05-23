@@ -28,6 +28,8 @@ export interface IThemeInterface {
     buttonFont: string;
 
     alert: string;
+
+    fontSize: string;
 }
 
 export const theme = {
@@ -47,7 +49,9 @@ export const theme = {
     buttonFill: colors.grey,
     buttonFont: colors.white,
 
-    alert: colors.info
+    alert: colors.info,
+
+    fontSize: '16px'
 };
 
 export default styled;

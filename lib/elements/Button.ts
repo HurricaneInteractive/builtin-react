@@ -11,7 +11,7 @@ export const Button = styled.button`
     color: ${props => props.theme.buttonFont || white};
     cursor: pointer;
     display: inline-block;
-    font-size: ${ calculateEM(button) };
+    font-size: ${ props => props.theme.fontSize || calculateEM(button) };
     line-height: 1.2;
     font-weight: bold;
     margin: 0 ${ calculateEM(15, button) } ${ calculateEM(15, button) } 0;

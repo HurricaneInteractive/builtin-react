@@ -11,6 +11,7 @@ export const AlertWrapper = styled.div`
     font-weight: normal;
     color: ${props => darken(0.3, props.theme.alert || info)};
     position: relative;
+    font-size: ${ props => props.theme.fontSize || calculateEM(basefontsize) };
 
     border: 1px solid ${props => props.theme.alert || info};
     background-color: ${props => rgba(props.theme.alert || info, 0.03)};
